@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Get in Touch - Harsh Bhayani</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .get-in-touch-container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to bottom, #e3f2fd, #fff);
+    }
+    .get-in-touch-form {
+      background: #fff;
+      padding: 40px 32px;
+      border-radius: 16px;
+      box-shadow: 0 4px 32px rgba(94,93,240,0.08);
+      max-width: 400px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .get-in-touch-form input,
+    .get-in-touch-form textarea {
+      padding: 12px;
+      border: 1.5px solid #b2b7ff;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: inherit;
+      outline: none;
+      transition: border 0.2s;
+    }
+    .get-in-touch-form input:focus,
+    .get-in-touch-form textarea:focus {
+      border: 1.5px solid #5e5df0;
+    }
+    .get-in-touch-form button {
+      background: #5e5df0;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 14px 0;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .get-in-touch-form button:hover {
+      background: #443acc;
+      transform: translateY(-2px) scale(1.03);
+    }
+    .form-error {
+      color: #d32f2f;
+      font-size: 0.95rem;
+      margin-top: -10px;
+      margin-bottom: 6px;
+      display: none;
+    }
+    .back-link {
+      margin-top: 32px;
+      color: #5e5df0;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .back-link:hover {
+      color: #443acc;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="get-in-touch-container">
+    <h2 style="color:#5e5df0; margin-bottom: 18px;">Get in Touch</h2>
+    <form class="get-in-touch-form" id="contactForm" novalidate>
+      <input type="text" id="name" name="name" placeholder="Your Name" required />
+      <div class="form-error" id="nameError">Please enter your name.</div>
+      <input type="email" id="email" name="email" placeholder="Your Email" required />
+      <div class="form-error" id="emailError">Please enter a valid email address.</div>
+      <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+      <div class="form-error" id="messageError">Please enter your message.</div>
+      <button type="submit">Send Message</button>
+    </form>
+    <a href="index.html" class="back-link">&larr; Back to Home</a>
+  </div>
+  <script>
+    const form = document.getElementById('contactForm');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
+    const nameError = document.getElementById('nameError');
+    const emailError = document.getElementById('emailError');
+    const messageError = document.getElementById('messageError');
+
+    function validateEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    form.addEventListener('submit', function(e) {
+      let valid = true;
+      // Name
+      if (!nameInput.value.trim()) {
+        nameError.style.display = 'block';
+        valid = false;
+      } else {
+        nameError.style.display = 'none';
+      }
+      // Email
+      if (!emailInput.value.trim() || !validateEmail(emailInput.value.trim())) {
+        emailError.style.display = 'block';
+        valid = false;
+      } else {
+        emailError.style.display = 'none';
+      }
+      // Message
+      if (!messageInput.value.trim()) {
+        messageError.style.display = 'block';
+        valid = false;
+      } else {
+        messageError.style.display = 'none';
+      }
+      if (!valid) {
+        e.preventDefault();
+      } else {
+        alert('Thank you for getting in touch!');
+      }
+    });
+  </script>
+</body>
+</html> 

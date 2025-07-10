@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Harsh Bhayani - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Loading Overlay -->
+  <div id="siteLoader">
+    <div class="loader-spinner">
+      <svg class="advanced-loader" width="90" height="90" viewBox="0 0 90 90">
+        <defs>
+          <linearGradient id="loaderGradient" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#5e5df0"/>
+            <stop offset="100%" stop-color="#00bcd4"/>
+          </linearGradient>
+        </defs>
+        <circle cx="45" cy="45" r="36" stroke="#e3f2fd" stroke-width="8" fill="none"/>
+        <circle class="loader-arc" cx="45" cy="45" r="36" stroke="url(#loaderGradient)" stroke-width="8" fill="none" stroke-linecap="round" stroke-dasharray="60 180" stroke-dashoffset="0"/>
+        <circle class="loader-dot" cx="45" cy="17" r="6" fill="#5e5df0"/>
+      </svg>
+      <div class="loader-text">Loading Portfolio...</div>
+    </div>
+  </div>
+  <div id="mainContent" style="opacity:0; pointer-events:none;">
+
+  <nav>
+    <div class="logo"><b style="color: black;">P</b>ortfolio</div>
+    <button class="nav-toggle" id="navToggle" aria-label="Open navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="hero-bg-icons">
+      <!-- Computer Icon -->
+      <svg class="icon icon-computer" width="220" height="220" viewBox="0 0 120 120" fill="none"><rect x="15" y="30" width="90" height="50" rx="10" fill="#5e5df0"/><rect x="35" y="90" width="50" height="10" rx="5" fill="#b2b7ff"/><rect x="45" y="100" width="30" height="6" rx="3" fill="#5e5df0"/><rect x="30" y="40" width="60" height="30" rx="6" fill="#fff" opacity="0.15"/></svg>
+      <!-- Mobile Icon -->
+      <svg class="icon icon-mobile" width="180" height="180" viewBox="0 0 80 160" fill="none"><rect x="10" y="10" width="60" height="140" rx="12" fill="#00bcd4"/><rect x="25" y="130" width="30" height="10" rx="5" fill="#fff"/><rect x="30" y="25" width="20" height="90" rx="4" fill="#fff" opacity="0.18"/></svg>
+      <!-- Sticks (Paintbrushes) Icon -->
+      <svg class="icon icon-sticks" width="200" height="200" viewBox="0 0 100 100" fill="none"><rect x="70" y="10" width="14" height="60" rx="7" transform="rotate(45 70 10)" fill="#ffb74d"/><rect x="20" y="20" width="10" height="70" rx="5" transform="rotate(-20 20 20)" fill="#b2b7ff"/><rect x="50" y="15" width="8" height="60" rx="4" transform="rotate(10 50 15)" fill="#5e5df0"/><ellipse cx="25" cy="80" rx="18" ry="10" fill="#ffd180"/></svg>
+    </div>
+    <div class="hero-left">
+      <h1>Hi, I'm <span class="gradient-animate">Harsh Bhayani</span></h1>
+      <p><span class="typewriter">Frontend Developer | React.js | UI/UX Designer</span></p>
+      <div class="hero-buttons">
+        <button onclick="downloadCV()">Download CV</button>
+        <button id="hireMeBtn" class="pulse-btn">Hire Me</button>
+      </div>
+    </div>
+    <div class="hero-right-icons">
+      <svg class="icon-computer hero-icon-switch" width="220" height="220" viewBox="0 0 120 120" fill="none">
+        <rect x="15" y="30" width="90" height="50" rx="10" fill="#5e5df0"/>
+        <rect x="35" y="90" width="50" height="10" rx="5" fill="#b2b7ff"/>
+        <rect x="45" y="100" width="30" height="6" rx="3" fill="#5e5df0"/>
+        <rect x="30" y="40" width="60" height="30" rx="6" fill="#fff" opacity="0.15"/>
+      </svg>
+      <svg class="icon-mobile hero-icon-switch" width="180" height="180" viewBox="0 0 80 160" fill="none">
+        <rect x="10" y="10" width="60" height="140" rx="12" fill="#00bcd4"/>
+        <rect x="25" y="130" width="30" height="10" rx="5" fill="#fff"/>
+        <rect x="30" y="25" width="20" height="90" rx="4" fill="#fff" opacity="0.18"/>
+      </svg>
+    </div>
+    <!-- <div class="hero-right">
+      <img src="assets/download (1).png" alt="Harsh" class="profile-pic"/>
+      <svg viewBox="0 0 1440 320" class="cloud-svg">
+        <!-- <path fill=" #5e5df0" fill-opacity="10"
+          d="M0,96L60,101.3C120,107,240,117,360,144C480,171,600,213,720,197.3C840,181,960,107,1080,96C1200,85,1320,139,1380,165.3L1440,192L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
+        </path> -->
+      </svg>
+    </div> 
+  </section>
+
+  <section class="projects" id="projects" style="background-color:#5e5df0;">
+    <h2 style="color: white; margin-top: 25PX;">My Projects</h2>
+    <div class="project-slider">
+      <button class="slider-arrow slider-arrow-left" aria-label="Previous project">&#8592;</button>
+      <div class="project-slider-track">
+        <div class="project-slide">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="assets/Screenshot 2025-07-07 122653.png" alt="WhatsApp UI/UX Design">
+              <button class="view-full-btn" data-img="assets/Screenshot 2025-07-07 122653.png">View Full Image</button>
+              <div class="project-overlay">
+               
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-category">UI/UX Design</div>
+              <h3 class="project-title">WhatsApp UI/UX Design</h3>
+              <p class="project-description">Modern WhatsApp interface design created with Figma, featuring intuitive user experience and beautiful visual elements.</p>
+              <div class="project-tech">
+                <span class="tech-tag">Figma</span>
+                <span class="tech-tag">UI Design</span>
+                <span class="tech-tag">UX Research</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-slide">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="assets/Screenshot 2025-04-16 104749.png" alt="Taxi Booking UI/UX Design">
+              <button class="view-full-btn" data-img="assets/Screenshot 2025-04-16 104749.png">View Full Image</button>
+              <div class="project-overlay">
+              
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-category">UI/UX Design</div>
+              <h3 class="project-title">Taxi Booking App</h3>
+              <p class="project-description">Complete taxi booking application design with user-friendly interface, booking flow, and driver tracking features.</p>
+              <div class="project-tech">
+                <span class="tech-tag">Figma</span>
+                <span class="tech-tag">Mobile Design</span>
+                <span class="tech-tag">Prototyping</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-slide">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="assets/aaa.png" alt="WhatsApp Clone">
+              <button class="view-full-btn" data-img="assets/aaa.png">View Full Image</button>
+              <div class="project-overlay">
+               
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-category">Web Development</div>
+              <h3 class="project-title">WhatsApp Clone</h3>
+              <p class="project-description">Frontend WhatsApp clone with real-time messaging, user authentication, and modern responsive design.</p>
+              <div class="project-tech">
+                <span class="tech-tag">React.js</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Socket.io</span>
+              </div>
+            </div>
+
+
+            
+          </div>
+        </div>
+      </div>
+      <button class="slider-arrow slider-arrow-right" aria-label="Next project">&#8594;</button>
+      <div class="slider-dots"></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 style="font-size: xx-large; color: white;">Contact Me</h2>
+    
+
+
+  <section id="get-in-touch">
+    <div class="get-in-touch-container split">
+      <div class="get-in-touch-text " style="background-color: #5e5df0; border-radius: 10px;">
+        <h2 style="color:white; margin-bottom: 18px; text-align: center;">Let's Work Together!</h2>
+      
+        </ul>
+      </div>
+      <div class="form-icons form-icons-left" style="display:none; justify-content:center; gap:24px; margin-bottom:18px;">
+        <!-- Computer Icon -->
+        <svg class="icon icon-computer" width="60" height="60" viewBox="0 0 120 120" fill="none"><rect x="15" y="30" width="90" height="50" rx="10" fill="#5e5df0"/><rect x="35" y="90" width="50" height="10" rx="5" fill="#b2b7ff"/><rect x="45" y="100" width="30" height="6" rx="3" fill="#5e5df0"/><rect x="30" y="40" width="60" height="30" rx="6" fill="#fff" opacity="0.15"/></svg>
+        <!-- Mobile Icon -->
+        <svg class="icon icon-mobile" width="50" height="50" viewBox="0 0 80 160" fill="none"><rect x="10" y="10" width="60" height="140" rx="12" fill="#00bcd4"/><rect x="25" y="130" width="30" height="10" rx="5" fill="#fff"/><rect x="30" y="25" width="20" height="90" rx="4" fill="#fff" opacity="0.18"/></svg>
+        <!-- Sticks (Paintbrushes) Icon -->
+        <svg class="icon icon-sticks" width="65" height="65" viewBox="0 0 100 100" fill="none"><rect x="70" y="10" width="14" height="60" rx="7" transform="rotate(45 70 10)" fill="#ffb74d"/><rect x="20" y="20" width="10" height="70" rx="5" transform="rotate(-20 20 20)" fill="#b2b7ff"/><rect x="50" y="15" width="8" height="60" rx="4" transform="rotate(10 50 15)" fill="#5e5df0"/><ellipse cx="25" cy="80" rx="18" ry="10" fill="#ffd180"/></svg>
+      </div>
+      <form class="get-in-touch-form" id="contactForm" novalidate>
+        <input type="text" id="name" name="name" placeholder="Your Name" required />
+        <div class="form-error" id="nameError">Please enter your name.</div>
+        <input type="email" id="email" name="email" placeholder="Your Email" required />
+        <div class="form-error" id="emailError">Please enter a valid email address.</div>
+        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+        <div class="form-error" id="messageError">Please enter your message.</div>
+        <button type="submit">Send Message</button>
+      </form>
+      <div class="form-icons form-icons-right" style="display:none; justify-content:center; gap:24px; margin-bottom:18px;">
+        <!-- Computer Icon -->
+        <svg class="icon icon-computer" width="60" height="60" viewBox="0 0 120 120" fill="none"><rect x="15" y="30" width="90" height="50" rx="10" fill="#5e5df0"/><rect x="35" y="90" width="50" height="10" rx="5" fill="#b2b7ff"/><rect x="45" y="100" width="30" height="6" rx="3" fill="#5e5df0"/><rect x="30" y="40" width="60" height="30" rx="6" fill="#fff" opacity="0.15"/></svg>
+        <!-- Mobile Icon -->
+        <svg class="icon icon-mobile" width="50" height="50" viewBox="0 0 80 160" fill="none"><rect x="10" y="10" width="60" height="140" rx="12" fill="#00bcd4"/><rect x="25" y="130" width="30" height="10" rx="5" fill="#fff"/><rect x="30" y="25" width="20" height="90" rx="4" fill="#fff" opacity="0.18"/></svg>
+        <!-- Sticks (Paintbrushes) Icon -->
+        <svg class="icon icon-sticks" width="65" height="65" viewBox="0 0 100 100" fill="none"><rect x="70" y="10" width="14" height="60" rx="7" transform="rotate(45 70 10)" fill="#ffb74d"/><rect x="20" y="20" width="10" height="70" rx="5" transform="rotate(-20 20 20)" fill="#b2b7ff"/><rect x="50" y="15" width="8" height="60" rx="4" transform="rotate(10 50 15)" fill="#5e5df0"/><ellipse cx="25" cy="80" rx="18" ry="10" fill="#ffd180"/></svg>
+      </div>
+    </div>
+  </section>
+</section>
+  <!-- Scroll to Top/Hero Arrow Button -->
+  <button id="scrollToHeroBtn" aria-label="Scroll to top" style="display:none;" onclick="scrollToHero()">
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+      <circle cx="16" cy="16" r="16" fill="#5e5df0"/>
+      <path d="M16 22V10" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M10 16l6-6 6 6" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <!-- Modal for full image -->
+  <div id="fullImageModal" class="full-image-modal">
+    <div class="full-image-modal-overlay"></div>
+    <div class="full-image-modal-content">
+      <button class="full-image-close" aria-label="Close full image">&times;</button>
+      <img id="fullImageModalImg" src="" alt="Full Project Image" />
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    const form = document.getElementById('contactForm');
+    if (form) {
+      const nameInput = document.getElementById('name');
+      const emailInput = document.getElementById('email');
+      const messageInput = document.getElementById('message');
+      const nameError = document.getElementById('nameError');
+      const emailError = document.getElementById('emailError');
+      const messageError = document.getElementById('messageError');
+
+      function validateEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      }
+
+      form.addEventListener('submit', function(e) {
+        let valid = true;
+        // Name
+        if (!nameInput.value.trim()) {
+          nameError.style.display = 'block';
+          valid = false;
+        } else {
+          nameError.style.display = 'none';
+        }
+        // Email
+        if (!emailInput.value.trim() || !validateEmail(emailInput.value.trim())) {
+          emailError.style.display = 'block';
+          valid = false;
+        } else {
+          emailError.style.display = 'none';
+        }
+        // Message
+        if (!messageInput.value.trim()) {
+          messageError.style.display = 'block';
+          valid = false;
+        } else {
+          messageError.style.display = 'none';
+        }
+        if (!valid) {
+          e.preventDefault();
+        } else {
+          alert('Thank you for getting in touch!');
+        }
+      });
+    }
+    // Hero icons side sticky effect with color change
+    const heroSection = document.querySelector('.hero');
+    const projectsSection = document.getElementById('projects');
+    const contactSection = document.getElementById('contact');
+    const getInTouchSection = document.getElementById('get-in-touch');
+    const heroIcons = document.querySelector('.hero-bg-icons');
+    const heroIconsRight = document.querySelector('.hero-bg-icons-right');
+
+    function getSectionInView() {
+      const scrollY = window.scrollY || window.pageYOffset;
+      const buffer = 120; // px
+      const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+      const projectsBottom = projectsSection.offsetTop + projectsSection.offsetHeight;
+      const contactBottom = contactSection.offsetTop + contactSection.offsetHeight;
+      if (scrollY + buffer < heroBottom) return 'hero';
+      if (scrollY + buffer < projectsBottom) return 'projects';
+      if (scrollY + buffer < contactBottom) return 'contact';
+      return 'getintouch';
+    }
+
+    function setIconsClasses(icons, section, inHero) {
+      if (!icons) return;
+      if (inHero) {
+        icons.classList.remove('icons-side', 'icons-theme-projects', 'icons-theme-contact', 'icons-theme-getintouch', 'icons-theme-hero');
+      } else {
+        icons.classList.add('icons-side');
+        icons.classList.remove('icons-theme-hero', 'icons-theme-projects', 'icons-theme-contact', 'icons-theme-getintouch');
+        icons.classList.add('icons-theme-' + section);
+      }
+    }
+
+    function handleHeroIconsPosition() {
+      if (!heroSection || !heroIcons) return;
+      const heroRect = heroSection.getBoundingClientRect();
+      const inHero = heroRect.bottom > 0;
+      const section = getSectionInView();
+      setIconsClasses(heroIcons, section, inHero);
+      setIconsClasses(heroIconsRight, section, inHero);
+      // Show form-icons only in contact or get-in-touch
+      const formIconsLeft = document.querySelector('.form-icons-left');
+      const formIconsRight = document.querySelector('.form-icons-right');
+      if (formIconsLeft && formIconsRight) {
+        if (section === 'contact' || section === 'getintouch') {
+          formIconsLeft.classList.add('show-form-icons');
+          formIconsRight.classList.add('show-form-icons');
+          if (heroIcons) heroIcons.style.display = 'none';
+          if (heroIconsRight) heroIconsRight.style.display = 'none';
+        } else {
+          formIconsLeft.classList.remove('show-form-icons');
+          formIconsRight.classList.remove('show-form-icons');
+          if (heroIcons) heroIcons.style.display = '';
+          if (heroIconsRight) heroIconsRight.style.display = '';
+        }
+      }
+    }
+    window.addEventListener('scroll', handleHeroIconsPosition);
+    window.addEventListener('resize', handleHeroIconsPosition);
+    // Initial check
+    handleHeroIconsPosition();
+
+    // Get in Touch section animation
+    const getInTouchText = document.querySelector('.get-in-touch-text');
+    const getInTouchForm = document.querySelector('.get-in-touch-form');
+    if (getInTouchSection && getInTouchText && getInTouchForm) {
+      // Hide form initially
+      getInTouchForm.classList.remove('form-in');
+      // Intersection Observer to trigger animation
+      const observer = new window.IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            getInTouchText.classList.add('animate-in');
+            setTimeout(() => {
+              getInTouchForm.classList.add('form-in');
+            }, 800); // after slide-in
+            observer.disconnect();
+          }
+        });
+      }, { threshold: 0.3 });
+      observer.observe(getInTouchSection);
+    }
+    // Scroll to Hero Button logic
+    const scrollToHeroBtn = document.getElementById('scrollToHeroBtn');
+    function checkScrollBtnVisibility() {
+      const heroSection = document.querySelector('.hero');
+      if (!heroSection) return;
+      const heroRect = heroSection.getBoundingClientRect();
+      // If hero section is mostly out of view (scrolled down), show button
+      if (heroRect.bottom < 100 || heroRect.top < -100) {
+        scrollToHeroBtn.style.display = 'block';
+      } else {
+        scrollToHeroBtn.style.display = 'none';
+      }
+    }
+    window.addEventListener('scroll', checkScrollBtnVisibility);
+    window.addEventListener('resize', checkScrollBtnVisibility);
+    // Initial check
+    checkScrollBtnVisibility();
+    function scrollToHero() {
+      const heroSection = document.querySelector('.hero');
+      if (heroSection) {
+        heroSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    // Smooth scroll for Hire Me button
+    const hireMeBtn = document.getElementById('hireMeBtn');
+    if (hireMeBtn) {
+      hireMeBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const contactSection = document.getElementById('contact');
+        if (contactSection) {
+          contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    }
+    // Loader logic
+    window.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+        document.getElementById('siteLoader').style.display = 'none';
+        const mainContent = document.getElementById('mainContent');
+        mainContent.style.opacity = 1;
+        mainContent.style.pointerEvents = 'auto';
+      }, 2000);
+    });
+  </script>
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Harsh Bhayani</h3>
+        <p>Frontend Developer & UI/UX Designer</p>
+        <p>Passionate about creating beautiful and functional web experiences</p>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="assets/HARSH BHAYANI ORG RESUME.pdf" target="_blank">Resume</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Skills & Technologies</h4>
+        <ul>
+          <li>React.js</li>
+          <li>JavaScript</li>
+          <li>HTML/CSS</li>
+          <li>UI/UX Design</li>
+          <li>Figma</li>
+          <li>Node.js</li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Contact Info</h4>
+        <div class="contact-info">
+          <p>📍 Based in Ahmedabad,India.</p>
+          <p>📧 harshbhayani.career@gmail.com</p>
+          <p>📱 Available for freelance work</p>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Connect With Me</h4>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/iamharshbhayani07" target="_blank" class="footer-icon" aria-label="Instagram">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><rect x="6" y="6" width="20" height="20" rx="6" stroke="#b2b7ff" stroke-width="2" fill="none"/><circle cx="16" cy="16" r="5" stroke="#b2b7ff" stroke-width="2" fill="none"/><circle cx="22.2" cy="9.8" r="1.2" fill="#b2b7ff"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/harshbhayani07/" target="_blank" class="footer-icon" aria-label="LinkedIn">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><rect x="6" y="6" width="20" height="20" rx="6" stroke="#b2b7ff" stroke-width="2" fill="none"/><rect x="11" y="14" width="2.5" height="7" rx="1.2" fill="#b2b7ff"/><rect x="18.5" y="17" width="2.5" height="4" rx="1.2" fill="#b2b7ff"/><circle cx="12.25" cy="11.5" r="1.25" fill="#b2b7ff"/></svg>
+          </a>
+          <a href="https://github.com/Harshcoder1314" target="_blank" class="footer-icon" aria-label="GitHub">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="10" stroke="#b2b7ff" stroke-width="2" fill="none"/><path d="M13 21c-2 0-2-1-2-1m6 1v-2.2c0-.6-.2-1-.6-1.3 2-.2 4-1 4-4.5 0-1-.3-1.7-.9-2.3.1-.2.4-1-.1-2.1 0 0-.8-.3-2.5.9-.7-.2-1.5-.3-2.3-.3s-1.6.1-2.3.3c-1.7-1.2-2.5-.9-2.5-.9-.5 1.1-.2 1.9-.1 2.1-.6.6-.9 1.3-.9 2.3 0 3.5 2 4.3 4 4.5-.2.2-.4.5-.5 1v2.2" stroke="#b2b7ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="footer-details">
+        <p>&copy; 2025 Harsh Bhayani. All rights reserved.</p>
+        <p>Made with ❤️ by Harsh Bhayani</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
